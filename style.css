@@ -90,7 +90,7 @@ textarea{
 #outputBox{
     display: flex;
     flex-direction: column;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     padding: 10px 10px 0 10px;
     width:45%;
 }
@@ -103,6 +103,7 @@ textarea{
     /* margin: 10px; */
     /* resize: none; */
     position: relative;
+    text-align: center;
 
     font-size: 25px;
     /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
