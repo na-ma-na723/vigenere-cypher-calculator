@@ -66,18 +66,27 @@ body{
     font-family: "urw-din",sans-serif;
 }
 
+#calc{
+    padding-bottom: 10px;
+}
+
 #calculator{
-    border: 2px solid rgb(208, 255, 0);
+    /* border: 2px solid rgb(208, 255, 0); */
     padding: 20px;
     display: flex;
     /* align-items: center; */
     justify-content: center;
     flex-direction: column;
+    background-color: #2A2A2C;
+    border-radius: 5px;
 }
 
+
 textarea{
-    color: #131417;
+    color: white;
     font-family: Georgia, serif;
+    background-color: #18181a;
+    text-align: center;
 }
 
 #inOutBox{
@@ -103,7 +112,6 @@ textarea{
     /* margin: 10px; */
     /* resize: none; */
     position: relative;
-    text-align: center;
 
     font-size: 25px;
     /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
@@ -136,6 +144,73 @@ textarea{
 
 
 
+#example{
+    /* border: 2px solid rgb(208, 255, 0); */
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+
+#example h2{
+    padding-bottom: 10px;
+}
+
+#example p{
+    background-color: #2A2A2C;
+    border-radius: 5px;
+    padding: 15px;
+    /* letter-spacing: 2px; */
+    line-height: 1.5;
+    font-family: Consolas,monospace;
+}
+
+#method{
+    /* border: 2px solid rgb(184, 135, 230); */
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+}
+
+#method h3{
+    font-family: "urw-din",sans-serif;
+}
+
+#method #map{
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid rgb(184, 135, 230); */
+    padding: 10px;
+    width: fit-content;
+    background-color: #2A2A2C;
+    margin: 20px 0 20px;
+    border-radius: 5px;
+}
+
+#method .mapSet{
+    padding: 20px 25px;
+    font-size: 20px;
+    font-family: Consolas,monospace;
+    /* border: 2px solid rgb(184, 135, 230); */
+}
+
+#method #formulae{
+    /* border: 2px solid rgb(208, 255, 0); */
+    display: flex;
+    flex-direction: column;
+    font-family: Consolas,monospace;
+}
+
+#method p{
+    font-size: 20px;
+}
+
+
+
+
+
+
+
 @media (max-width: 900px) {
     body{
         padding: 50px;
@@ -144,7 +219,7 @@ textarea{
         width: 100%;
     }
     #calculator{
-        border: 2px solid rgb(208, 255, 0);
+        /* border: 2px solid rgb(208, 255, 0); */
         padding: 20px;
         display: flex;
         /* justify-content: center; */
@@ -180,5 +255,15 @@ textarea{
         /* height: 30px; */
     }
 
+
+    #method #map{
+        display: flex;
+        flex-direction: column;
+        /* border: 2px solid rgb(184, 135, 230); */
+    }
+
+    #method .mapSet{
+        padding: 0;
+    }
     
 }
