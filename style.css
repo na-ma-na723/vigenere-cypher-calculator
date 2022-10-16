@@ -187,6 +187,11 @@ textarea{
     border-radius: 5px;
 }
 
+#method .mapg{
+    display: flex;
+    flex-direction: row;
+}
+
 #method .mapSet{
     padding: 20px 25px;
     font-size: 20px;
@@ -258,12 +263,19 @@ textarea{
 
     #method #map{
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
         /* border: 2px solid rgb(184, 135, 230); */
     }
 
+    #method .mapg{
+        display: block;
+        padding: 25px 0;
+        /* flex-direction: column; */
+    }
+
+
     #method .mapSet{
-        padding: 0;
+        padding: 0 20px ;
     }
     
 }
