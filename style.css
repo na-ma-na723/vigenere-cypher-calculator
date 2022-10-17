@@ -18,7 +18,7 @@ body{
     align-items: center;
     padding: 10px;
     padding-top: 20px;
-    background-color: #131417;;
+    background-color: #131417;
 }
 
 .main{
@@ -210,6 +210,63 @@ textarea{
     font-size: 20px;
 }
 
+#codeBox{
+    display: flex;
+    flex-direction: column;
+}
+
+#codeBox #languageButton .langbtn{
+    padding: 5px;
+    background-color: #131417;
+    font-size: 15px;
+    font-family: Consolas,monospace;
+}
+
+#languageButton{
+    display: flex;
+    gap: 0;
+}
+
+#languageButton #buttonFill{
+    width: 100%;
+    border-bottom: 2px solid white;
+}
+
+#languageButton #cppButton{
+    border: 2px solid white;
+    border-bottom: 0;
+}
+
+#languageButton #pyButton{
+    border: 0;
+    border-bottom: 2px solid white;
+    color: yellow;
+}
+
+#languageButton #jsButton{
+    border: 0;
+    border-bottom: 2px solid white;
+    color: yellow;
+}
+
+#code{
+    background-color: #272822;
+    padding: 10px;
+    border: 2px solid white;
+    border-top: 0;
+}
+
+#code #cpp{
+    opacity: 1 ;
+}
+
+#code #python{
+    opacity: 0 ;
+}
+
+#code #javascript{
+    opacity: 0 ;
+}
 
 
 
