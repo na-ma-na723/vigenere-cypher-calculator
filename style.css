@@ -215,9 +215,10 @@ textarea{
     flex-direction: column;
 }
 
+
 #codeBox #languageButton .langbtn{
     padding: 5px;
-    background-color: #131417;
+    /* background-color: #131417; */
     font-size: 15px;
     font-family: Consolas,monospace;
 }
@@ -234,26 +235,35 @@ textarea{
 
 #languageButton #cppButton{
     border: 2px solid white;
+    background-color: #272822;
     border-bottom: 0;
 }
 
 #languageButton #pyButton{
     border: 0;
+    background-color: #131417;
     border-bottom: 2px solid white;
     color: yellow;
 }
 
 #languageButton #jsButton{
     border: 0;
+    background-color: #131417;
     border-bottom: 2px solid white;
     color: yellow;
 }
 
 #code{
     background-color: #272822;
-    padding: 10px;
+    padding: 25px 15px 15px 32px;
     border: 2px solid white;
     border-top: 0;
+}
+
+#code pre{
+    padding: 10px;
+    background-color: #30312a;
+    border-radius: 5px;
 }
 
 #code #cpp{

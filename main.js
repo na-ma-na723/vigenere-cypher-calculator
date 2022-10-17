@@ -2,17 +2,19 @@ const inputText = document.getElementById("inputText");
 const outputText = document.getElementById("outputText");
 const key = document.getElementById("key");
 
-
+// console.log(vigenereCppCode);
 
 const cppBtn = document.getElementById("cppButton");
 const pyBtn = document.getElementById("pyButton");
 const jsBtn = document.getElementById("jsButton");
 
+const vigenereActiveCode = document.getElementById("activeCode");
+
 // const languageBtn = document.getElementsByClassName("langbtn")
 
-const cppCode = document.getElementById("cpp");
-const pyCode = document.getElementById("python");
-const jsCode = document.getElementById("javascript");
+// const cppCode = document.getElementById("cpp");
+// const pyCode = document.getElementById("python");
+// const jsCode = document.getElementById("javascript");
 
 function vigenereKeyLength(key, msg) {
     let keyLength = key.length;
@@ -83,7 +85,7 @@ function decryptButtonCall() {
 document.querySelector("#encryptButton").addEventListener("click",encryptButtonCall)
 document.querySelector("#decryptButton").addEventListener("click",decryptButtonCall)
 
-
+vigenereActiveCode.innerText = vigenereCppCode;
 cppBtn.addEventListener("click", ()=>{
 
     if(cppBtn.value === "notselected"){
@@ -108,9 +110,15 @@ cppBtn.addEventListener("click", ()=>{
         pyBtn.style.color = "yellow";
         jsBtn.style.color = "yellow";
         
-        cppCode.style.opacity = "1" ;
-        pyCode.style.opacity = "0" ;
-        jsCode.style.opacity = "0" ;
+        // cppCode.style.opacity = "1" ;
+        // pyCode.style.opacity = "0" ;
+        // jsCode.style.opacity = "0" ;
+
+        vigenereActiveCode.innerText = vigenereCppCode;
+
+        // cppCode.style.height = "100%";
+        // pyCode.style.height = "0";
+        // jsCode.style.height = "0";
     }
 
 })
@@ -139,10 +147,16 @@ pyBtn.addEventListener("click", ()=>{
         pyBtn.style.color = "white";
         jsBtn.style.color = "yellow";
         
+        vigenereActiveCode.innerText = vigenerePyCode;
 
-        cppCode.style.opacity = "0" ;
-        pyCode.style.opacity = "1" ;
-        jsCode.style.opacity = "0" ;
+        // cppCode.style.opacity = "0" ;
+        // pyCode.style.opacity = "1" ;
+        // jsCode.style.opacity = "0" ;
+
+        // cppCode.style.height = "0";
+        // pyCode.style.height = "100%";
+        // jsCode.style.height = "0";
+
     }
 
 })
@@ -171,9 +185,15 @@ jsBtn.addEventListener("click", ()=>{
         pyBtn.style.color = "yellow";
         jsBtn.style.color = "white";
 
-        cppCode.style.opacity = "0" ;
-        pyCode.style.opacity = "0" ;
-        jsCode.style.opacity = "1" ;
+        vigenereActiveCode.innerText = vigenereJsCode;
+
+        // cppCode.style.opacity = "0" ;
+        // pyCode.style.opacity = "0" ;
+        // jsCode.style.opacity = "1" ;
+
+        // cppCode.style.height = "0";
+        // pyCode.style.height = "0";
+        // jsCode.style.height = "100%";
     }
 
 })
