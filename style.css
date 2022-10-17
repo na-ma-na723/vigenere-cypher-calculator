@@ -221,6 +221,7 @@ textarea{
     /* background-color: #131417; */
     font-size: 15px;
     font-family: Consolas,monospace;
+    border-radius: 5px 5px 0 0;
 }
 
 #languageButton{
