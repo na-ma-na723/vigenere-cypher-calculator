@@ -265,6 +265,9 @@ textarea{
     padding: 10px;
     background-color: #30312a;
     border-radius: 5px;
+    overflow-x: overlay;
+    max-width: 90vw;
+
 }
 
 #code #cpp{
