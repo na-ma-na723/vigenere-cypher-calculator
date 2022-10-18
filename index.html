@@ -7,6 +7,8 @@
     <title>Vigenere Cypher</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./assests/hacker.png">
+    <script src="./util.js" defer></script>
+    <script src="./main.js" defer></script>
 </head>
 <body>
     <div class="main">
@@ -146,24 +148,27 @@
 
         <div id="codeBox">
             <div id="languageButton">
-                <button id="cppButton" class="langbtn" value="selected" >CPP</button>
-                <button id="pyButton" class="langbtn" value="notselected" >PYTHON</button>
-                <button id="jsButton" class="langbtn" value="notselected" >JAVASCRIPT</button>
-                <div id="buttonFill"></div>
+                <button id="cppButton" class="langbtn selected" value="selected" >CPP</button>
+                <button id="pyButton" class="langbtn notSelected" value="notselected" >PYTHON</button>
+                <button id="jsButton" class="langbtn notSelected" value="notselected" >JAVASCRIPT</button>
+                <div id="buttonFill">
+                    <button id="copy"><img src="./assests/copy.png" alt=""></button></i></button>
+                </div>
             </div>
 
             <div id="code">
+                
                 <div id="active">
-                    <pre id="activeCode"></pre>
-                </div>
+                    <pre id="activeCode">
 
+                    </pre>
+                </div>
             </div>
         </div>
 
 
     </div>
-    <script src="./util.js"></script>
-    <script src="./main.js"></script>
+    
 </body>
 </html>
 

@@ -94,25 +94,33 @@ cppBtn.addEventListener("click", ()=>{
         pyBtn.value = "notselected";
         jsBtn.value = "notselected";
 
-        cppBtn.style.backgroundColor = "#272822";
-        pyBtn.style.backgroundColor = "#131417";
-        jsBtn.style.backgroundColor = "#131417";
+        // cppBtn.style.backgroundColor = "#272822";
+        // pyBtn.style.backgroundColor = "#131417";
+        // jsBtn.style.backgroundColor = "#131417";
 
-        cppBtn.style.border = "2px solid white"
-        pyBtn.style.border = "0";
-        jsBtn.style.border = "0";
+        // cppBtn.style.border = "2px solid white"
+        // pyBtn.style.border = "0";
+        // jsBtn.style.border = "0";
 
-        cppBtn.style.borderBottom = "0";
-        pyBtn.style.borderBottom = "2px solid white";
-        jsBtn.style.borderBottom = "2px solid white";
+        // cppBtn.style.borderBottom = "0";
+        // pyBtn.style.borderBottom = "2px solid white";
+        // jsBtn.style.borderBottom = "2px solid white";
 
-        cppBtn.style.color = "white";
-        pyBtn.style.color = "yellow";
-        jsBtn.style.color = "yellow";
+        // cppBtn.style.color = "white";
+        // pyBtn.style.color = "yellow";
+        // jsBtn.style.color = "yellow";
         
         // cppCode.style.opacity = "1" ;
         // pyCode.style.opacity = "0" ;
         // jsCode.style.opacity = "0" ;
+
+        cppBtn.classList.add('selected');
+        pyBtn.classList.add('notSelected');
+        jsBtn.classList.add('notSelected');
+
+        cppBtn.classList.remove("notSelected");
+        pyBtn.classList.remove("selected");
+        jsBtn.classList.remove("selected");
 
         vigenereActiveCode.innerText = vigenereCppCode;
 
@@ -131,21 +139,29 @@ pyBtn.addEventListener("click", ()=>{
         pyBtn.value = "selected";
         jsBtn.value = "notselected";
 
-        cppBtn.style.backgroundColor = "#131417";
-        pyBtn.style.backgroundColor = "#272822";
-        jsBtn.style.backgroundColor = "#131417";
+        // cppBtn.style.backgroundColor = "#131417";
+        // pyBtn.style.backgroundColor = "#272822";
+        // jsBtn.style.backgroundColor = "#131417";
 
-        cppBtn.style.border = "0"
-        pyBtn.style.border = "2px solid white";
-        jsBtn.style.border = "0";
+        // cppBtn.style.border = "0"
+        // pyBtn.style.border = "2px solid white";
+        // jsBtn.style.border = "0";
 
-        cppBtn.style.borderBottom = "2px solid white";
-        pyBtn.style.borderBottom = "0";
-        jsBtn.style.borderBottom = "2px solid white";
+        // cppBtn.style.borderBottom = "2px solid white";
+        // pyBtn.style.borderBottom = "0";
+        // jsBtn.style.borderBottom = "2px solid white";
 
-        cppBtn.style.color = "yellow";
-        pyBtn.style.color = "white";
-        jsBtn.style.color = "yellow";
+        // cppBtn.style.color = "yellow";
+        // pyBtn.style.color = "white";
+        // jsBtn.style.color = "yellow";
+
+        cppBtn.classList.add("notSelected");
+        pyBtn.classList.add("selected");
+        jsBtn.classList.add("notSelected");
+
+        cppBtn.classList.remove("selected");
+        pyBtn.classList.remove("notSelected");
+        jsBtn.classList.remove("selected");
         
         vigenereActiveCode.innerText = vigenerePyCode;
 
@@ -169,21 +185,29 @@ jsBtn.addEventListener("click", ()=>{
         pyBtn.value = "notselected";
         jsBtn.value = "selected";
 
-        cppBtn.style.backgroundColor = "#131417";
-        pyBtn.style.backgroundColor = "#131417";
-        jsBtn.style.backgroundColor = "#272822";
+        // cppBtn.style.backgroundColor = "#131417";
+        // pyBtn.style.backgroundColor = "#131417";
+        // jsBtn.style.backgroundColor = "#272822";
 
-        cppBtn.style.border = "0"
-        pyBtn.style.border = "0";
-        jsBtn.style.border = "2px solid white";
+        // cppBtn.style.border = "0"
+        // pyBtn.style.border = "0";
+        // jsBtn.style.border = "2px solid white";
 
-        cppBtn.style.borderBottom = "2px solid white";
-        pyBtn.style.borderBottom = "2px solid white";
-        jsBtn.style.borderBottom = "0";
+        // cppBtn.style.borderBottom = "2px solid white";
+        // pyBtn.style.borderBottom = "2px solid white";
+        // jsBtn.style.borderBottom = "0";
 
-        cppBtn.style.color = "yellow";
-        pyBtn.style.color = "yellow";
-        jsBtn.style.color = "white";
+        // cppBtn.style.color = "yellow";
+        // pyBtn.style.color = "yellow";
+        // jsBtn.style.color = "white";
+
+        cppBtn.classList.add("notSelected");
+        pyBtn.classList.add("notSelected");
+        jsBtn.classList.add("selected");
+
+        cppBtn.classList.remove("selected");
+        pyBtn.classList.remove("selected");
+        jsBtn.classList.remove("notSelected");
 
         vigenereActiveCode.innerText = vigenereJsCode;
 

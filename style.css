@@ -219,7 +219,7 @@ textarea{
 #codeBox #languageButton .langbtn{
     padding: 5px;
     /* background-color: #131417; */
-    font-size: 15px;
+    font-size: 20px;
     font-family: Consolas,monospace;
     border-radius: 5px 5px 0 0;
 }
@@ -232,9 +232,30 @@ textarea{
 #languageButton #buttonFill{
     width: 100%;
     border-bottom: 2px solid white;
+    display: flex;
+    justify-content: right;
+    padding-right: 10px;
+    align-items: center;
 }
 
-#languageButton #cppButton{
+#copy{
+    background-color: #131417;
+    border: 0;
+}
+
+#copy img{
+    width: 20px;
+    height: 20px;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+#copy img:hover{
+    width: 30px;
+    height: 30px;
+}
+
+
+/* #languageButton #cppButton{
     border: 2px solid white;
     background-color: #272822;
     border-bottom: 0;
@@ -252,7 +273,7 @@ textarea{
     background-color: #131417;
     border-bottom: 2px solid white;
     color: yellow;
-}
+} */
 
 #code{
     background-color: #272822;
@@ -281,6 +302,21 @@ textarea{
 #code #javascript{
     opacity: 0 ;
 }
+
+.selected{
+    background-color: #272822;
+    border: 2px solid white;
+    border-bottom: 0;
+    color: white;
+}
+
+.notSelected{
+    background-color: #131417;
+    border: 0;
+    border-bottom: 2px solid white;
+    color: yellow;
+}
+
 
 
 
@@ -348,5 +384,33 @@ textarea{
     #method .mapSet{
         padding: 0 20px ;
     }
+
+}
+
+@media (max-width: 300px) {
+    #languageButton{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #languageButton .langbtn{
+        background-color: antiquewhite;
+    }
+
+    #languageButton #cpp{
+        border: 2px solid white;
+    }
+
+    #languageButton #cppButton{
+        border: 2px solid white;
+    }
     
+    #languageButton #pyButton{
+        border: 2px solid white;
+    }
+    
+    #languageButton #jsButton{
+        border: 2px solid white;
+    }
+
 }
