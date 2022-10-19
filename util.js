@@ -83,7 +83,8 @@ int main() {
     string cypher = msgToCypher(msg, key, l);
     string plain = cypherToPlain(cypher, key, l);
 
-    cout<< "CYPHER TEXT -> " << cypher << "\n" << "ORIGINAL TEXT -> "<< plain;
+    cout << "CYPHER TEXT -> " << cypher;
+    cout << "ORIGINAL TEXT -> "<< plain;
     
     return 0;
 }`
