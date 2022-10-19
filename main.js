@@ -88,7 +88,7 @@ document.querySelector("#encryptButton").addEventListener("click",encryptButtonC
 document.querySelector("#decryptButton").addEventListener("click",decryptButtonCall)
 
 vigenereActiveCode.innerText = vigenereCppCode;
-const copyText = document.getElementById("copy");
+const copyText = document.getElementById("copyButton");
 const copiedText = document.getElementById("activeCode");
 // const tempTextArea = document.createElement('textarea');
 
@@ -99,6 +99,11 @@ copyText.addEventListener("click", ()=>{
     // document.execCommand("copy");
     navigator.clipboard.writeText(copiedText.innerText);
     // tempTextArea.remove();
+    copyText.classList.add('copied');
+
+    setTimeout(()=>{
+        copyText.classList.remove('copied');
+    },700)
 })
 
 
