@@ -10,8 +10,10 @@ const jsBtn = document.getElementById("jsButton");
 
 const vigenereActiveCode = document.getElementById("activeCode");
 
-// const languageBtn = document.getElementsByClassName("langbtn")
+// const copyText = document.getElementById("copy");
+// const copiedText = document.getElementById("#activeCode")
 
+// const languageBtn = document.getElementsByClassName("langbtn")
 // const cppCode = document.getElementById("cpp");
 // const pyCode = document.getElementById("python");
 // const jsCode = document.getElementById("javascript");
@@ -86,6 +88,20 @@ document.querySelector("#encryptButton").addEventListener("click",encryptButtonC
 document.querySelector("#decryptButton").addEventListener("click",decryptButtonCall)
 
 vigenereActiveCode.innerText = vigenereCppCode;
+const copyText = document.getElementById("copy");
+const copiedText = document.getElementById("activeCode");
+// const tempTextArea = document.createElement('textarea');
+
+copyText.addEventListener("click", ()=>{
+    // tempTextArea.textContent = copiedText;
+    // document.body.append(tempTextArea);
+    // tempTextArea.select();
+    // document.execCommand("copy");
+    navigator.clipboard.writeText(copiedText.innerText);
+    // tempTextArea.remove();
+})
+
+
 cppBtn.addEventListener("click", ()=>{
 
     if(cppBtn.value === "notselected"){

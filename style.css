@@ -244,15 +244,15 @@ textarea{
 }
 
 #copy img{
-    width: 20px;
-    height: 20px;
-    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+    width: 28px;
+    height: 28px;
+    /* transition: width 0.2s ease-in-out, height 0.2s ease-in-out; */
 }
 
-#copy img:hover{
-    width: 30px;
-    height: 30px;
-}
+/* #copy img:hover{
+    width: 28px;
+    height: 28px;
+} */
 
 
 /* #languageButton #cppButton{
@@ -288,7 +288,6 @@ textarea{
     border-radius: 5px;
     overflow-x: overlay;
     max-width: 90vw;
-
 }
 
 #code #cpp{

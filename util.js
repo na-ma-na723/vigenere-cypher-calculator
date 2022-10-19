@@ -1,6 +1,6 @@
 const vigenereCppCode = `// VIGENERE CYPHER
-#include &ltiostream>
-#include &ltstring>
+#include <iostream>
+#include<string>
 using namespace std;
 
 int str_length(string s) {
@@ -15,9 +15,9 @@ int str_length(string s) {
 string txtUpper(string s, int l) {
     string res = "";
 
-    for(int i=0; i &lt l; i++) {
+    for(int i=0; i<l; i++) {
         int temp = s[i];
-        if( 65 &lt= temp &amp&amp temp &lt= 90) {
+        if( 65<=temp && temp<=90) {
             temp += 32;
         }
         res += temp;
@@ -28,7 +28,7 @@ string txtUpper(string s, int l) {
 string keylen(string key, int plain) {
     int temp = str_length(key);
 
-    for(int i=0; i &lt plain - temp; i++) {
+    for(int i=0; i<plain-temp; i++) {
         key += key[i%temp];
     }
     return key;
@@ -39,10 +39,10 @@ string msgToCypher(string plain, string key, int l) {
     
     string res = "";
     
-    for(int i=0; i &lt l; i++) {
+    for(int i=0; i<l; i++) {
         int a = plain[i];
         int b = key[i];
-        res += table[ ( (a-97) + (b-97) )%26 ]; 
+        res += table[ ( (a-97) + (b-97) )%26 ];   /*(110-97) + (99-97) 13+2 = 15%26*/
     }
     
     return res;
@@ -53,11 +53,11 @@ string cypherToPlain(string cypher, string key, int l) {
     
     string res = "";
     
-    for(int i=0; i &lt l; i++) {
+    for(int i=0; i<l; i++) {
         int a = cypher[i];
         int b = key[i];
         int temp = a-b;    
-        if( temp &lt 0) {
+        if( temp < 0) {
             temp = 26 + temp;
         }
         res += table[ temp ];
@@ -69,9 +69,9 @@ string cypherToPlain(string cypher, string key, int l) {
 int main() {
     string msg, key;
 
-    cout &lt&lt "Enter your message : ";
+    cout << "Enter your message : ";
     cin >> msg;
-    cout &lt&lt "Enter key : ";
+    cout << "Enter key : ";
     cin >> key;
     
     int l = str_length(msg);
@@ -83,7 +83,7 @@ int main() {
     string cypher = msgToCypher(msg, key, l);
     string plain = cypherToPlain(cypher, key, l);
 
-    cout &lt "CYPHER TEXT -> "  &lt cypher  &lt "\n"  &lt "ORIGINAL TEXT -> " &lt plain;
+    cout<< "CYPHER TEXT -> " << cypher << "\n" << "ORIGINAL TEXT -> "<< plain;
     
     return 0;
 }`
@@ -139,7 +139,7 @@ function keyLength(key, msg) {
 function encrypt(msg, key){
     let table = "abcdefghijklmnopqrstuvwxyz";
     let res = "";
-    for(let i=0; i &lt 15; i++) {
+    for(let i=0; i < 15; i++) {
         let a = msg.charCodeAt(i);
         let b = key.charCodeAt(i);
 
@@ -151,7 +151,7 @@ function encrypt(msg, key){
 function decrypt(cypher, key){
     let table = "abcdefghijklmnopqrstuvwxyz";
     let res = "";
-    for(let i=0; i &lt 15; i++) {
+    for(let i=0; i < 15; i++) {
         let a = cypher.charCodeAt(i);
         let b = key.charCodeAt(i);
         let temp = a-b;
