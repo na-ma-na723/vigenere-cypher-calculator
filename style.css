@@ -82,6 +82,20 @@ body{
     border-radius: 5px;
 }
 
+#keyBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#key{
+    width: 93%;
+    height: 40px;
+    resize: none;
+    font-size: 25px;
+    border: 2px solid yellow;
+}
+
 
 textarea{
     color: white;
@@ -130,20 +144,6 @@ textarea{
 .btn:hover{
     cursor: pointer;
 }
-
-#keyBox{
-    display: flex;
-    justify-content: center;
-}
-
-#key{
-    width: 93%;
-    height: 40px;
-    resize: none;
-    font-size: 25px;
-}
-
-
 
 #example{
     /* border: 2px solid rgb(208, 255, 0); */
